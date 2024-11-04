@@ -1,0 +1,9 @@
+import pandas as pd 
+date = pd.read_csv('seattle_pet_licenses.csv')
+num_pets = date.shape[0]
+print(f"{num_pets}")
+num_variables = date.shape[1]
+print(f"{num_variables}")
+name_counts = date['animal_s_name'].value_counts()
+top_three_names = name_counts.head(3)
+print(top_three_names)
